@@ -1,0 +1,44 @@
+{
+  "name": "pizzaswap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "check": "npx hardhat run --network fantom_test scripts/test.js",
+    "test": "npx hardhat test",
+    "compile": "npx hardhat compile",
+    "clean": "npx hardhat clean",
+    "deploybsc": "npx hardhat run --network bsc_test  scripts/deploy.js",
+    "deploy_sepolia": "npx hardhat run --network sepolia  scripts/deploy.js",
+    "deploy_polygon": "npx hardhat run --network polygonAmoy  scripts/deploy.js",
+    "lint:sol": "solhint -f table contracts/**/*.sol",
+    "sepolia_lottery": "npx hardhat run --network sepolia  scripts/deploylottery.js",
+    "bsctest_lottery": "npx hardhat run --network bsc_test  scripts/deploylottery.js",
+    "polygon_lottery": "npx hardhat run --network polygonAmoy  scripts/deploylottery.js",
+    "sepolia_lottery_start": "npx hardhat run --network sepolia  scripts/startlottery.js",
+    "resetfarm": "npx hardhat run --network sepolia  scripts/farmingadd.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.3",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.2",
+    "hardhat": "^2.7.1"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "^0.4.1",
+    "@nomiclabs/hardhat-etherscan": "^3.1.8",
+    "@openzeppelin/contracts": "^3.4.1",
+    "@openzeppelin/contracts-upgradeable": "^4.8.3",
+    "@uniswap/lib": "^4.0.1-alpha",
+    "dotenv": "^14.2.0",
+    "envfile": "^6.17.0",
+    "fs": "^0.0.1-security",
+    "tiny-invariant": "^1.1.0",
+    "tiny-warning": "^1.0.3"
+  }
+}
